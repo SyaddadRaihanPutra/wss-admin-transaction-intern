@@ -14,7 +14,7 @@
 
 <body>
     <!-- Full-width Navbar -->
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-white fixed-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand fw-semibold">
                 <img src="assets/img/wss-logo.png" width="60">
@@ -30,7 +30,7 @@
 
     <!-- Offcanvas Sidebar -->
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-white">
             <div class="container-fluid">
                 <a href="/" class="navbar-brand fw-semibold">
                     <img src="assets/img/wss-logo.png" width="60">
@@ -129,12 +129,12 @@
 
     <!-- Main Content Area -->
     <div class="d-flex flex-column flex-lg-row">
-        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-light text-dark"
+        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
             style="height: 100vh; width: 250px; overflow-y: auto;">
-            <ul class="nav nav-pills flex-column mb-auto">
+            <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
                 <div class="search-box mb-3">
                     <i class="ti ti-search"></i>
-                    <input type="text" class="form-control py-2" placeholder="Search...">
+                    <input type="text" id="search" class="form-control py-2" placeholder="Search...">
                     <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
                 </div>
                 <li class="nav-item">
@@ -221,16 +221,16 @@
         <main class="flex-fill p-3 mt-5 pt-4">
             <div class="d-flex align-items-center">
                 <h3 class="me-3 mb-0">Role Setting</h3>
-                <select class="form-select border border-2 border-primary">
+                <select class="form-select rounded-4 border border-2 border-primary" style="width: 175px;">
                     <option selected>Approval</option>
                     <option>Inputer</option>
                 </select>
             </div>
             <div class="table-responsive mt-4">
-                <table class="table text-nowrap table-bordered table-striped table-hover align-middle">
+                <table class="table text-nowrap table-striped table-hover align-middle">
                     <thead>
                         <tr>
-                            <th style="width: 25px;"></th>
+                            <th style="width: 100px;"></th>
                             <th>ID</th>
                             <th>UserName</th>
                             <th class="text-center">Created Date</th>
@@ -240,7 +240,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                         class="ti ti-pencil-minus ic-edit fs-3"></i></button></td>
                             <td>W0001</td>
                             <td>
@@ -254,8 +254,8 @@
                             <td>Quotation, Purchase Order</td>
                         </tr>
                         <tr>
-                            <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                class="ti ti-pencil-minus ic-edit fs-3"></i></td>
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                        class="ti ti-pencil-minus ic-edit fs-3"></i></td>
                             <td>W0003</td>
                             <td>
                                 <div class="d-flex text-nowrap flex-column align-items-start">
@@ -268,8 +268,8 @@
                             <td>Quotation, Purchase Order, Invoice</td>
                         </tr>
                         <tr>
-                            <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                class="ti ti-pencil-minus ic-edit fs-3"></i></td>
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                        class="ti ti-pencil-minus ic-edit fs-3"></i></td>
                             <td>W0002</td>
                             <td>
                                 <div class="d-flex text-nowrap flex-column align-items-start">
@@ -302,34 +302,49 @@
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                                <h4 class="modal-title" id="exampleModalLabel">Manage Role - W0001 (Nelson)</h4>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <!-- Content for the modal -->
-                                <p><b>Code:</b> W0001</p>
-                                <p><b>Name:</b> Nelson</p>
-                                <p><b>Status:</b> Approval</p>
-                                <p><b>Date Created:</b> 06-08-2024</p>
-                                <p><b>Date Updated:</b> 06-08-2024</p>
-                                <p><b>Documents:</b> Quotation, Purchase Order</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        ALL
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Form Quotation
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Form Purchase Order
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Form Invoice
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm mt-4">Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </main>
     </div>
+
+    <script src="assets/js/script.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
         integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='

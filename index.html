@@ -14,7 +14,7 @@
 
 <body>
     <!-- Full-width Navbar -->
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-white fixed-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand fw-semibold">
                 <img src="assets/img/wss-logo.png" width="60">
@@ -30,7 +30,7 @@
 
     <!-- Offcanvas Sidebar -->
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
-        <nav class="navbar navbar-light">
+        <nav class="navbar navbar-white">
             <div class="container-fluid">
                 <a href="/" class="navbar-brand fw-semibold">
                     <img src="assets/img/wss-logo.png" width="60">
@@ -47,13 +47,13 @@
                     <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
                 </div>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" aria-current="page">
+                    <a href="#" class="nav-link cs-active" aria-current="page">
                         <i class="ti ti-home fs-5"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-user-edit fs-5"></i>
                         User Role Manage
                     </a>
@@ -120,7 +120,8 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center" href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -128,22 +129,22 @@
 
     <!-- Main Content Area -->
     <div class="d-flex flex-column flex-lg-row">
-        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-light text-dark"
+        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
             style="height: 100vh; width: 250px; overflow-y: auto;">
-            <ul class="nav nav-pills flex-column mb-auto">
+            <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
                 <div class="search-box mb-3">
                     <i class="ti ti-search"></i>
-                    <input type="text" class="form-control py-2" placeholder="Search...">
+                    <input type="text" id="search" class="form-control py-2" placeholder="Search...">
                     <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
                 </div>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" aria-current="page">
+                    <a href="#" class="nav-link cs-active" aria-current="page">
                         <i class="ti ti-home fs-5"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-user-edit fs-5"></i>
                         User Role Manage
                     </a>
@@ -211,7 +212,8 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center" href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
                 </ul>
             </div>
         </div>
