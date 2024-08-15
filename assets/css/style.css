@@ -1,4 +1,4 @@
-nav.navbar{border-bottom:1px solid #B5B5B5;}
+nav.navbar{border-bottom:1px solid #b5b5b5}
 .search-box{position:relative;margin-bottom:30px}
 .search-box input,.search-box input:focus{padding-left:35px;padding-right:45px;background-color:#f4f4f6;border:1px solid #e5e7eb}
 .search-box .ti-search{position:absolute;top:50%;left:10px;transform:translateY(-50%);color:#6b7280}
@@ -6,6 +6,7 @@ nav.navbar{border-bottom:1px solid #B5B5B5;}
 .cs-active{background-color:#f4f4fc;color:#5a3ef1!important;border:1px solid #d7d6f2;border-radius:8px;display:flex;align-items:center;padding:8px 12px;font-weight:500}
 .cs-active .ti{color:#7172f2;margin-right:8px}
 .cs-active:hover{text-decoration:none}
-a.nav-link{display:flex;align-items:center;padding:8px 12px;font-weight:500;color: #6B7280;}
+a.nav-link{display:flex;align-items:center;padding:8px 12px;font-weight:500;color:#6b7280}
 a.nav-link .ti{margin-right:8px}
-/* *{outline: 1px solid red;} */
+select.form-select{width:auto;display:inline-block}
+.ic-edit{color: #959595;}
