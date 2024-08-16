@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap);
 nav.navbar{border-bottom:1px solid #b5b5b5}
 .search-box{position:relative;margin-bottom:30px}
 .search-box input,.search-box input:focus{padding-left:35px;padding-right:45px;background-color:#f4f4f6;border:1px solid #e5e7eb}
@@ -19,4 +20,13 @@ li.nav-item a.nav-link.active{color:#5a3ef1}
 .placeholder-container{width:150px;height:150px;border:2px dashed #ccc;border-radius:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#f8f9fa}
 .placeholder-icon{font-size:40px;color:#6c757d}
 .placeholder-text{margin-top:10px;color:#6c757d;text-align:center;font-size:15px}
-button.btn.btn-save{background-color:#4b7df3;color: #fff;}
+body#bg-login{background:linear-gradient(to right,#fff 70%,#8faef8 30%);height:100vh;margin:0;font-family: "M PLUS Rounded 1c", sans-serif;}
+button.btn.btn-save{background-color:#4b7df3;color:#fff}
+.login-container{background-color:#fff;border-radius:20px;box-shadow:0 0 20px rgba(0,0,0,.1);overflow:hidden}
+.login-form{padding:40px}
+.label-login{color: #263A43;}
+.ti-eye, .ti-eye-off{color:#8E8E8E;}
+.form-control{border-radius:5px;border-bottom:1px solid #b1b1b1;transition:border-bottom .3s ease,box-shadow .3s ease;padding:15px 10px}
+.form-control:focus{border-bottom:4px solid #8979f0;box-shadow:none}
+.btn-login{background-color:#7c4dff;border:none;border-radius:5px;padding:15px 0;font-weight:800}
+.btn-login:hover{background-color:#6039c8}
