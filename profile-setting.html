@@ -239,12 +239,17 @@
                             aria-labelledby="account-tab">
                             <div class="d-flex flex-column mt-4">
                                 <p class="text-muted">Your Profile Picture</p>
-                                <div class="placeholder-container">
-                                    <div class="placeholder-icon">
+                                <div class="placeholder-container" id="uploadContainer">
+                                    <div class="placeholder-icon" id="iconContainer">
                                         <i class="ti ti-photo-plus"></i>
                                     </div>
-                                    <p class="placeholder-text">Upload your <br> photo</p>
+                                    <p class="placeholder-text" id="placeholderText">Upload your <br> photo</p>
+                                    <!-- Preview Image -->
+                                    <img id="imagePreview" src="" alt="Profile Image Preview"
+                                        style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
                                 </div>
+                                <!-- Hidden File Input -->
+                                <input type="file" id="profileImage" accept="image/*" style="display:none;">
                             </div>
                             <hr>
                             <div class="row">
@@ -315,12 +320,35 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </div>
-    </main>
+        </main>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById('uploadContainer').addEventListener('click', function () {
+            document.getElementById('profileImage').click();
+        });
+
+        document.getElementById('profileImage').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    const iconContainer = document.getElementById('iconContainer');
+                    const placeholderText = document.getElementById('placeholderText');
+
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+
+                    // Hide the placeholder icon and text
+                    iconContainer.style.display = 'none';
+                    placeholderText.style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
         integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='

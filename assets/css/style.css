@@ -17,7 +17,30 @@ select.form-select{width:auto;display:inline-block}
 .table thead th{color:#534d59;padding:1rem 5px}
 li.nav-item .nav-link{color:#717b8c}
 li.nav-item a.nav-link.active{color:#5a3ef1}
-.placeholder-container{width:150px;height:150px;border:2px dashed #ccc;border-radius:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#f8f9fa}
+.placeholder-container {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    position: relative; /* Needed for positioning the image inside */
+    overflow: hidden;   /* To ensure the image stays within the container */
+    cursor: pointer;
+}
+
+.placeholder-icon, .placeholder-text {
+    text-align: center;
+    z-index: 1; /* Ensure these are on top of the image initially */
+}
+
+#imagePreview {
+    z-index: 0; /* Ensure the image is behind the icon and text initially */
+}
+.placeholder-container:hover{cursor: pointer;}
 .placeholder-icon{font-size:40px;color:#6c757d}
 .placeholder-text{margin-top:10px;color:#6c757d;text-align:center;font-size:15px}
 body#bg-login{background:linear-gradient(to right,#fff 70%,#8faef8 30%);height:100vh;margin:0;font-family: "M PLUS Rounded 1c", sans-serif;}
