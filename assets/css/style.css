@@ -17,39 +17,55 @@ select.form-select{width:auto;display:inline-block}
 .table thead th{color:#534d59;padding:1rem 5px}
 li.nav-item .nav-link{color:#717b8c}
 li.nav-item a.nav-link.active{color:#5a3ef1}
-.placeholder-container {
-    width: 150px;
-    height: 150px;
-    border: 2px dashed #ccc;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-    position: relative; /* Needed for positioning the image inside */
-    overflow: hidden;   /* To ensure the image stays within the container */
-    cursor: pointer;
-}
-
-.placeholder-icon, .placeholder-text {
-    text-align: center;
-    z-index: 1; /* Ensure these are on top of the image initially */
-}
-
-#imagePreview {
-    z-index: 0; /* Ensure the image is behind the icon and text initially */
-}
-.placeholder-container:hover{cursor: pointer;}
+.placeholder-container{width:150px;height:150px;border:2px dashed #ccc;border-radius:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#f8f9fa;position:relative;overflow:hidden;cursor:pointer}
+.placeholder-icon,.placeholder-text{text-align:center;z-index:1}
+#imagePreview{z-index:0}
+.placeholder-container:hover{cursor:pointer}
 .placeholder-icon{font-size:40px;color:#6c757d}
 .placeholder-text{margin-top:10px;color:#6c757d;text-align:center;font-size:15px}
-body#bg-login{background:linear-gradient(to right,#fff 70%,#8faef8 30%);height:100vh;margin:0;font-family: "M PLUS Rounded 1c", sans-serif;}
+body#bg-login{background:linear-gradient(to right,#fff 70%,#8faef8 30%);height:100vh;margin:0;font-family:"M PLUS Rounded 1c",sans-serif}
 button.btn.btn-save{background-color:#4b7df3;color:#fff}
 .login-container{background-color:#fff;border-radius:20px;box-shadow:0 0 20px rgba(0,0,0,.1);overflow:hidden}
 .login-form{padding:40px}
-.label-login{color: #263A43;}
-.ti-eye, .ti-eye-off{color:#8E8E8E;}
+.label-login{color:#263a43}
+.ti-eye,.ti-eye-off{color:#8e8e8e}
 .form-control{border-radius:5px;border-bottom:1px solid #b1b1b1;transition:border-bottom .3s ease,box-shadow .3s ease;padding:15px 10px}
 .form-control:focus{border-bottom:4px solid #8979f0;box-shadow:none}
 .btn-login{background-color:#7c4dff;border:none;border-radius:5px;padding:15px 0;font-weight:800}
 .btn-login:hover{background-color:#6039c8}
+h3{color:#656565!important}
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #0b5ed7 !important;
+    border-color: #0a58ca !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-revisi {
+    background-color: #B34BF3;
+    color: #fff;
+}
+
+.btn-revisi:hover,
+.btn-revisi:active,
+.btn-revisi:focus {
+    background-color: #5f39c8c1 !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-reject {
+    background-color: #F34B55;
+    color: #fff;
+}
+
+.btn-reject:hover,
+.btn-reject:active,
+.btn-reject:focus {
+    background-color: #c83945 !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
