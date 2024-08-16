@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSS Admin Transaction</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
+        integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="../../assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Full-width Navbar -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand fw-semibold">
+                <img src="../../assets/img/wss-logo.png" width="60">
+                WSS Admin Transaction
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <nav class="navbar navbar-white">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand fw-semibold">
+                    <img src="assets/img/wss-logo.png" width="60">
+                    WSS Admin Transaction
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </nav>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                        Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown mt-3">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="d-flex flex-column flex-lg-row">
+        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
+            style="min-height:100vh; width: 250px; overflow-y: auto;">
+            <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" id="search" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                        Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <hr>
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-fill p-3 mt-5 pt-4">
+            <h3 class="me-3 mt-2">Add/Edit Company</h3>
+            <p class="fw-bold text-decoration-underline mt-3">Customer Profile</p>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="mb-3">
+                            <label for="companyName" class="form-label fw-bold">#ID Customer</label>
+                            <input type="text" class="form-control" id="companyName" placeholder="#WSS">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="mb-3">
+                            <label for="companyName" class="form-label fw-bold">Company Name</label>
+                            <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="fw-bold text-decoration-underline">Company Logo</p>
+                    <div class="d-flex flex-column mt-4">
+                        <p class="text-muted">Your Profile Picture</p>
+                        <div class="placeholder-container" style="width: 300px;" id="uploadContainer">
+                            <div class="placeholder-icon" id="iconContainer">
+                                <i class="ti ti-photo-plus"></i>
+                            </div>
+                            <p class="placeholder-text" id="placeholderText">Upload your <br> Image</p>
+                            <!-- Preview Image -->
+                            <img id="imagePreview" src="" alt="Profile Image Preview"
+                                style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
+                        </div>
+                        <!-- Hidden File Input -->
+                        <input type="file" id="profileImage" accept="image/*" style="display:none;">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="city" class="form-label fw-bold">Kota</label>
+                                <input type="text" class="form-control" id="city" placeholder="Kota">
+                            </div>
+                            <div class="mb-3">
+                                <label for="kecamatan" class="form-label fw-bold">Kecamatan</label>
+                                <input type="text" class="form-control" id="kecamatan" placeholder="Kecamatan">
+                            </div>
+                            <div class="mb-3">
+                                <label for="kelurahan" class="form-label fw-bold">Kelurahan</label>
+                                <input type="text" class="form-control" id="kelurahan" placeholder="Kelurahan">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label fw-bold">Detail Alamat</label>
+                                <textarea class="form-control" id="alamat" rows="3"
+                                    placeholder="Alamat......"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="companyEmail" class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control" id="companyEmail"
+                                    placeholder="info@vendor.com">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="companyTel1" class="form-label fw-bold">Telephone Number 1</label>
+                                <input type="number" class="form-control" id="companyTel1" placeholder="0812345678">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="website" class="form-label fw-bold">Website</label>
+                                <input type="url" class="form-control" id="website"
+                                    placeholder="http://www.wisesa-consulting.com">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="companyTel2" class="form-label fw-bold">Telephone Number 2</label>
+                                <input type="number" class="form-control" id="companyTel2" placeholder="0812345678">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="MobileNumber" class="form-label fw-bold">Mobile Number</label>
+                                <input type="number" class="form-control" id="MobileNumber" placeholder="0812345678">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="mb-3">
+                                <label for="WANumber" class="form-label fw-bold">Whatsapp Number</label>
+                                <input type="number" class="form-control" id="WANumber" placeholder="0812345678">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary px-3 fw-semibold">Save</button>
+                    <button type="button" class="btn btn-reject ms-2 fw-semibold">Nonaktifkan Customer</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
+        integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='
+        crossorigin='anonymous'></script>
+</body>
+
+</html>
