@@ -8,8 +8,8 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
         integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
         crossorigin='anonymous' />
-    <link rel="stylesheet" href="./assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-light bg-white fixed-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand fw-semibold">
-                <img src="assets/img/wss-logo.png" width="60">
+                <img src="../../assets/img/wss-logo.png" width="60">
                 WSS Admin Transaction
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
@@ -47,7 +47,7 @@
                     <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
                 </div>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-home fs-5"></i>
                         Dashboard
                     </a>
@@ -77,7 +77,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
                         aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
@@ -152,7 +152,7 @@
     <!-- Main Content Area -->
     <div class="d-flex flex-column flex-lg-row">
         <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
-            style="min-height:100vh;width: 250px; overflow-y: auto;">
+            style="min-height:100vh; width: 250px; overflow-y: auto;">
             <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
                 <div class="search-box mb-3">
                     <i class="ti ti-search"></i>
@@ -160,7 +160,7 @@
                     <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
                 </div>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-home fs-5"></i>
                         Dashboard
                     </a>
@@ -190,7 +190,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
                         aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
@@ -263,11 +263,182 @@
         </div>
         <!-- Main Content -->
         <main class="flex-fill p-3 mt-5 pt-4">
-            <!-- Your main content here -->
-            <h1>Dashboard</h1>
-            <h5 class="text-muted">Welcome to WSS Admin Transaction 👋</h5>
+            <div class="d-flex align-items-center">
+                <h3 class="me-3 mb-0">Master Company</h3>
+                <button class="btn btn-primary rounded-3 fw-semibold">New Company</button>
+            </div>
+            <div class="table-responsive mt-4">
+                <table class="table text-nowrap table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;"></th>
+                            <th>ID Customer</th>
+                            <th>Name</th>
+                            <th class="text-center">Created Date</th>
+                            <th class="text-center">Last Edit</th>
+                            <th>User Input</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1001</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1002</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1003</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1004</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">04-08-2024</td>
+                            <td class="text-center">05-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1005</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">04-08-2024</td>
+                            <td class="text-center">05-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1006</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">04-08-2024</td>
+                            <td class="text-center">05-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1007</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">04-08-2024 14:00</td>
+                            <td class="text-center">05-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1007</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">04-08-2024 14:00</td>
+                            <td class="text-center">05-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>CMP1007</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td class="text-center">03-08-2024 14:00</td>
+                            <td class="text-center">04-08-2024 14:00</td>
+                            <td>Faber Edinson</td>
+                            <td>Aktif</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </main>
     </div>
+
+    <script src="assets/js/script.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
         integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='

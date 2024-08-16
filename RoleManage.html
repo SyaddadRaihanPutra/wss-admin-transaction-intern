@@ -8,8 +8,8 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
         integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
         crossorigin='anonymous' />
-    <link rel="stylesheet" href="assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
@@ -77,10 +77,32 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" aria-current="page">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
                     </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul class="nav nav-pills flex-column mt-auto">
@@ -130,7 +152,7 @@
     <!-- Main Content Area -->
     <div class="d-flex flex-column flex-lg-row">
         <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
-            style="height: 100vh; width: 250px; overflow-y: auto;">
+            style="min-height:100vh;width: 250px; overflow-y: auto;">
             <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
                 <div class="search-box mb-3">
                     <i class="ti ti-search"></i>
@@ -168,10 +190,32 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" aria-current="page">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
                     </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul class="nav nav-pills flex-column mt-auto">
