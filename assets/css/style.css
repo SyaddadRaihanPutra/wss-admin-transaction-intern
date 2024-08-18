@@ -55,10 +55,3 @@ main{scrollbar-width:none}
 ::-webkit-scrollbar-button{display:none}
 .table-responsive{scrollbar-width:thin;}
 .text-success{color: #008847!important;}
-.btn-close {
-    font-size: 1rem;
-    border: none;
-    background: none;
-    color: #dc3545;
-    cursor: pointer;
-}
