@@ -262,115 +262,138 @@
             </div>
         </div>
         <!-- Main Content -->
-        <main class="flex-fill p-3 mt-5 pt-4">
-            <h3 class="me-3 mt-2">Add/Edit Company</h3>
-            <p class="fw-bold text-decoration-underline mt-3">Customer Profile</p>
-            <form>
-                <div class="row">
-                    <div class="col-md-6 col-lg-5">
-                        <div class="mb-3">
-                            <label for="companyName" class="form-label fw-bold">#ID Customer</label>
-                            <input type="text" class="form-control" id="companyName" placeholder="#WSS">
+        <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
+            <h3 class="me-3 mt-2">Add/Edit Customer</h3>
+            <p class="fw-bold text-decoration-underline mt-3">Tipe Customer</p>
+            <div class="row">
+                <div class="col-md-8">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-5">
+                                <div class="mb-3">
+                                    <label for="type" class="form-label fw-bold">Type</label>
+                                    <select class="form-select d-block w-100" id="type">
+                                        <option value="company" selected>Company</option>
+                                        <option value="personal">Personal</option>
+                                    </select>                           
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-5">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label fw-bold">Title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="Mr" value="Mr" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-5">
+                                <div class="mb-3">
+                                    <label for="company" class="form-label fw-bold">Company</label>
+                                    <input type="text" class="form-control" id="company" placeholder="Company" value="Company" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-5">
+                                <div class="mb-3">
+                                    <label for="job" class="form-label fw-bold">Job Position</label>
+                                    <input type="text" class="form-control" id="job" placeholder="Job Position" value="Job Position" disabled>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-5">
-                        <div class="mb-3">
-                            <label for="companyName" class="form-label fw-bold">Company Name</label>
-                            <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                        <div class="mt-3">
+                            <p class="fw-bold text-decoration-underline">Customer Profile</p>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="IDCustomer" class="form-label fw-bold" style="color:#9A9A9A;">#ID Customer</label>
+                                        <input type="text" class="form-control" id="IDCustomer" placeholder="#WSS">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="companyName" class="form-label fw-bold">Nama Perusahaan</label>
+                                        <input type="text" class="form-control" id="companyName" placeholder="Nama Perusahaan">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="mt-3">
+                            <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="city" class="form-label fw-bold">Kota</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Kota">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="kecamatan" class="form-label fw-bold">Kecamatan</label>
+                                        <input type="text" class="form-control" id="kecamatan" placeholder="Kecamatan">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="kelurahan" class="form-label fw-bold">Kelurahan</label>
+                                        <input type="text" class="form-control" id="kelurahan" placeholder="Kelurahan">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="alamat" class="form-label fw-bold">Detail Alamat</label>
+                                        <textarea class="form-control" id="alamat" rows="3"
+                                            placeholder="Alamat......"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="KodePos" class="form-label fw-bold">Kode Pos</label>
+                                        <input type="text" class="form-control" id="KodePos" placeholder="Kelurahan">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="companyEmail" class="form-label fw-bold">Email</label>
+                                        <input type="email" class="form-control" id="companyEmail"
+                                            placeholder="info@vendor.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="companyTel1" class="form-label fw-bold">Telephone Number 1</label>
+                                        <input type="number" class="form-control" id="companyTel1" placeholder="0812345678">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="website" class="form-label fw-bold">Website</label>
+                                        <input type="url" class="form-control" id="website"
+                                            placeholder="http://www.wisesa-consulting.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="companyTel2" class="form-label fw-bold">Telephone Number 2</label>
+                                        <input type="number" class="form-control" id="companyTel2" placeholder="0812345678">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="MobileNumber" class="form-label fw-bold">Mobile Number</label>
+                                        <input type="number" class="form-control" id="MobileNumber" placeholder="0812345678">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="mb-3">
+                                        <label for="WANumber" class="form-label fw-bold">Whatsapp Number</label>
+                                        <input type="number" class="form-control" id="WANumber" placeholder="0812345678">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 d-flex align-items-center">
+                            <button type="submit" class="btn btn-primary px-3 fw-semibold">Save</button>
+                            <button type="button" class="btn btn-reject ms-2 fw-semibold">Nonaktifkan Customer</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="mt-3">
-                    <p class="fw-bold text-decoration-underline">Company Logo</p>
-                    <div class="d-flex flex-column mt-4">
-                        <p class="text-muted">Your Profile Picture</p>
-                        <div class="placeholder-container" style="width: 300px;" id="uploadContainer">
-                            <div class="placeholder-icon" id="iconContainer">
-                                <i class="ti ti-photo-plus"></i>
-                            </div>
-                            <p class="placeholder-text" id="placeholderText">Upload your <br> Image</p>
-                            <!-- Preview Image -->
-                            <img id="imagePreview" src="" alt="Profile Image Preview"
-                                style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
-                        </div>
-                        <!-- Hidden File Input -->
-                        <input type="file" id="profileImage" accept="image/*" style="display:none;">
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="city" class="form-label fw-bold">Kota</label>
-                                <input type="text" class="form-control" id="city" placeholder="Kota">
-                            </div>
-                            <div class="mb-3">
-                                <label for="kecamatan" class="form-label fw-bold">Kecamatan</label>
-                                <input type="text" class="form-control" id="kecamatan" placeholder="Kecamatan">
-                            </div>
-                            <div class="mb-3">
-                                <label for="kelurahan" class="form-label fw-bold">Kelurahan</label>
-                                <input type="text" class="form-control" id="kelurahan" placeholder="Kelurahan">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="alamat" class="form-label fw-bold">Detail Alamat</label>
-                                <textarea class="form-control" id="alamat" rows="3"
-                                    placeholder="Alamat......"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-3">
-                    <p class="fw-bold text-decoration-underline">Company Contact & Information</p>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="companyEmail" class="form-label fw-bold">Email</label>
-                                <input type="email" class="form-control" id="companyEmail"
-                                    placeholder="info@vendor.com">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="companyTel1" class="form-label fw-bold">Telephone Number 1</label>
-                                <input type="number" class="form-control" id="companyTel1" placeholder="0812345678">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="website" class="form-label fw-bold">Website</label>
-                                <input type="url" class="form-control" id="website"
-                                    placeholder="http://www.wisesa-consulting.com">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="companyTel2" class="form-label fw-bold">Telephone Number 2</label>
-                                <input type="number" class="form-control" id="companyTel2" placeholder="0812345678">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="MobileNumber" class="form-label fw-bold">Mobile Number</label>
-                                <input type="number" class="form-control" id="MobileNumber" placeholder="0812345678">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="mb-3">
-                                <label for="WANumber" class="form-label fw-bold">Whatsapp Number</label>
-                                <input type="number" class="form-control" id="WANumber" placeholder="0812345678">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-3 d-flex align-items-center">
-                    <button type="submit" class="btn btn-primary px-3 fw-semibold">Save</button>
-                    <button type="button" class="btn btn-reject ms-2 fw-semibold">Nonaktifkan Customer</button>
-                </div>
-            </form>
+            </div>
         </main>
     </div>
 

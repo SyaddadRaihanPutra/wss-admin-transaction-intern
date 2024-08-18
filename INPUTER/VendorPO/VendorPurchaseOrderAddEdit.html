@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSS Admin Transaction</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
+        integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="../../assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Full-width Navbar -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand fw-semibold">
+                <img src="../../assets/img/wss-logo.png" width="60">
+                WSS Admin Transaction
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <nav class="navbar navbar-white">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand fw-semibold">
+                    <img src="../../assets/img/wss-logo.png" width="60">
+                    WSS Admin Transaction
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </nav>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                        Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown mt-3">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="d-flex flex-column flex-lg-row">
+        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
+            style="min-height:100vh; width: 250px; overflow-y: auto;">
+            <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" id="search" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active" aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                        Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <hr>
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-bold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
+            <h3 class="me-3 mb-0 mt-2">Add/Edit Vendor Purchase Order</h3>
+            <form>
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="mt-3">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="poNumber" class="form-label fw-bold"
+                                            style="color:#9A9A9A;">PO Number</label>
+                                        <input type="text" class="form-control" id="poNumber"
+                                            placeholder="0001/WCI-QTT/08/24">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="poDate" class="form-label fw-bold">Po Date</label>
+                                        <input type="date" class="form-control" id="poDate">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="deliveryDate" class="form-label fw-bold">Delivery Date</label>
+                                        <input type="date" class="form-control" id="deliveryDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="to" class="form-label fw-bold">To</label>
+                                        <input type="text" class="form-control" id="to" placeholder="Kepada :">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="top" class="form-label fw-bold">Term Of Payment</label>
+                                        <select class="form-select d-block w-100" id="top">
+                                            <option selected>-</option>
+                                            <option value="1">60 Days</option>
+                                            <option value="2">90 Days</option>
+                                            <option value="3">120 Days</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="mb-3">
+                                        <label for="alamat" class="form-label fw-bold">Alamat</label>
+                                        <textarea class="form-control" id="alamat" rows="4"
+                                            placeholder="Alamat"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="me-3 mb-0 mt-2">Item add</h3>
+                    <hr class="mt-2">
+                    <div class="px-3">
+                        <div class="row g-3 py-2 text-nowrap fw-bold d-none d-md-flex" id="header">
+                            <div class="col-1 text-center">No</div>
+                            <div class="col-md-2">Item Name</div>
+                            <div class="col-md-2">Item Description</div>
+                            <div class="col-md-1">Quantity</div>
+                            <div class="col-md-1">Unit Price</div>
+                            <div class="col-md-1">Discount</div>
+                            <div class="col-md-1">Asuransi</div>
+                            <div class="col-md-1">Amount</div>
+                        </div>
+                        <div id="items-container">
+                            <div class="row g-3 py-2 align-items-center item-template">
+                                <div class="col-6 col-md-1 mb-2 mb-md-0">
+                                    <label class="d-md-none">No</label>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6">
+                                            <div class="md-text-center text-md-center text-left item-number">1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-2 mb-2 mb-md-0">
+                                    <label class="d-md-none">Item Name</label>
+                                    <input type="text" class="form-control" placeholder="Item Name">
+                                </div>
+                                <div class="col-6 col-md-2 mb-2 mb-md-0">
+                                    <label class="d-md-none">Item Description</label>
+                                    <input type="text" class="form-control" placeholder="Item Description">
+                                </div>
+                                <div class="col-6 col-md-1 mb-2 mb-md-0">
+                                    <label class="d-md-none">Quantity</label>
+                                    <input type="text" class="form-control" placeholder="Qty">
+                                </div>
+                                <div class="col-6 col-md-1 mb-2 mb-md-0">
+                                    <label class="d-md-none">Unit Price</label>
+                                    <input type="number" class="form-control" placeholder="Unit Price">
+                                </div>
+                                <div class="col-6 col-md-1 mb-2 mb-md-0">
+                                    <label class="d-md-none">Discount</label>
+                                    <input type="number" class="form-control" placeholder="0%">
+                                </div>
+                                <div class="col-6 col-md-1 mb-2 mb-md-0">
+                                    <label class="d-md-none">Asuransi</label>
+                                    <input type="number" class="form-control" placeholder="Asuransi">
+                                </div>
+                                <div class="col-6 col-md-2 mb-2 mb-md-0">
+                                    <label class="d-md-none">Amount</label>
+                                    <input type="number" class="form-control" placeholder="Amount" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-3 rounded-4 fw-bold px-3 py-2" id="new-item-btn">New Item</button>
+                    </div>
+                </div>
+                <div class="row mt-5 col-md-11">
+                    <div class="col-md-6 mb-4">
+                        <label for="paymentTO" class="form-label fw-bold">Payment to be remitted to :</label>
+                        <select class="form-select d-block w-75" id="paymentTO">
+                            <option selected>BANK CENTRAL ASIA (BCA) - 066-307-0808</option>
+                            <option value="1">BANK SYARIAH INDONESIA (BSI) - 066-307-0808</option>
+                            <option value="2">BANK MANDIRI - 066-307-0808</option>
+                            <option value="3">BANK RAKYAT INDONESIA (BRI) - 066-307-0808</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <table class="text-end">
+                            <tr>
+                                <td class="fw-bold">Sub Total</td>
+                                <td class="fw-bold">&nbsp;:&nbsp;</td>
+                                <td class="fw-bold">Rp. 1.000.000</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Discount</td>
+                                <td class="fw-bold">&nbsp;:&nbsp;</td>
+                                <td class="fw-bold">Rp. 0</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Tax</td>
+                                <td class="fw-bold">&nbsp;:&nbsp;</td>
+                                <td class="fw-bold">
+                                    <select class="form-select form-select-sm d-inline border-0 shadow-none fw-semibold" style="margin-right: -15px;color: #707070;" id="tax">
+                                        <option selected>PPN 11%</option>
+                                        <option value="1">PPN 10%</option>
+                                        <option value="2">PPN 9%</option>
+                                        <option value="3">PPN 8%</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Asuransi</td>
+                                <td class="fw-bold">&nbsp;:&nbsp;</td>
+                                <td class="fw-bold">Rp. 0</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Total</td>
+                                <td class="fw-bold">&nbsp;:&nbsp;</td>
+                                <td class="fw-bold">Rp. 1.000.000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="mb-3">
+                            <label for="signature" class="form-label fw-bold">Signature "Dibuat Oleh"</label>
+                            <select class="form-select d-block w-75 mb-3" id="signature">
+                                <option selected disabled>Master Signature</option>
+                                <option value="1">Jimmy - Signature</option>
+                                <option value="2">Nelson - Signature</option>
+                                <option value="3">Jovi - Signature</option>
+                            </select>
+                            <div class="placeholder-container" style="width: 300px;" id="uploadContainer">
+                                <div class="placeholder-icon" id="iconContainer">
+                                    <i class="ti ti-photo-plus"></i>
+                                </div>
+                                <p class="placeholder-text" id="placeholderText">Preview</p>
+                                <!-- Preview Image -->
+                                <img id="imagePreview" src="" alt="Profile Image Preview"
+                                    style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="mb-3">
+                            <label for="signature" class="form-label fw-bold">Signature "Diketahui Oleh"</label>
+                            <select class="form-select d-block w-75 mb-3" id="signature">
+                                <option selected disabled>Master Signature</option>
+                                <option value="1">Jimmy - Signature</option>
+                                <option value="2">Nelson - Signature</option>
+                                <option value="3">Jovi - Signature</option>
+                            </select>
+                            <div class="placeholder-container" style="width: 300px;" id="uploadContainer">
+                                <div class="placeholder-icon" id="iconContainer">
+                                    <i class="ti ti-photo-plus"></i>
+                                </div>
+                                <p class="placeholder-text" id="placeholderText">Preview</p>
+                                <!-- Preview Image -->
+                                <img id="imagePreview" src="" alt="Profile Image Preview"
+                                    style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <div class="mb-3">
+                            <label for="signature" class="form-label fw-bold">Signature "Disetujui Oleh"</label>
+                            <select class="form-select d-block w-75 mb-3" id="signature">
+                                <option selected disabled>Master Signature</option>
+                                <option value="1">Jimmy - Signature</option>
+                                <option value="2">Nelson - Signature</option>
+                                <option value="3">Jovi - Signature</option>
+                            </select>
+                            <div class="placeholder-container" style="width: 300px;" id="uploadContainer">
+                                <div class="placeholder-icon" id="iconContainer">
+                                    <i class="ti ti-photo-plus"></i>
+                                </div>
+                                <p class="placeholder-text" id="placeholderText">Preview</p>
+                                <!-- Preview Image -->
+                                <img id="imagePreview" src="" alt="Profile Image Preview"
+                                    style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary rounded-3 fw-bold px-3 py-2">Save</button>
+                    <button type="reset" class="btn btn-reject rounded-3 fw-bold px-3 py-2 ms-2">Cancel</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="../../assets/js/script.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
+        integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='
+        crossorigin='anonymous'></script>
+</body>
+
+</html>

@@ -262,7 +262,7 @@
             </div>
         </div>
         <!-- Main Content -->
-        <main class="flex-fill p-3 mt-5 pt-4">
+        <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
             <div class="d-flex align-items-center">
                 <h3 class="me-3 mb-0">Role Setting</h3>
                 <select class="form-select rounded-4 border border-2 border-primary" style="width: 175px;">
@@ -284,7 +284,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i
                                         class="ti ti-pencil-minus ic-edit fs-3"></i></button></td>
                             <td>W0001</td>
                             <td>
@@ -298,8 +299,8 @@
                             <td>Quotation, Purchase Order</td>
                         </tr>
                         <tr>
-                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="ti ti-pencil-minus ic-edit fs-3"></i></td>
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i class="ti ti-pencil-minus ic-edit fs-3"></i></td>
                             <td>W0003</td>
                             <td>
                                 <div class="d-flex text-nowrap flex-column align-items-start">
@@ -312,8 +313,8 @@
                             <td>Quotation, Purchase Order, Invoice</td>
                         </tr>
                         <tr>
-                            <td class="text-center"><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="ti ti-pencil-minus ic-edit fs-3"></i></td>
+                            <td class="text-center"><button class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i class="ti ti-pencil-minus ic-edit fs-3"></i></td>
                             <td>W0002</td>
                             <td>
                                 <div class="d-flex text-nowrap flex-column align-items-start">
@@ -327,60 +328,63 @@
                         </tr>
                     </tbody>
                 </table>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" id="exampleModalLabel">Manage Role - W0001 (Nelson)</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+            </div>
+            <nav aria-label="Page navigation example" class="mt-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="exampleModalLabel">Manage Role - W0001 (Nelson)</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                                <input class="form-check-input border border-2 border-primary" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ALL
+                                </label>
                             </div>
-                            <div class="modal-body">
-                                <!-- Checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        ALL
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Form Quotation
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Form Purchase Order
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input border border-2 border-primary" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Form Invoice
-                                    </label>
-                                </div>
-                                <button type="button" class="btn btn-primary btn-sm mt-4">Save</button>
+                            <div class="form-check">
+                                <input class="form-check-input border border-2 border-primary" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Form Quotation
+                                </label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input border border-2 border-primary" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Form Purchase Order
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input border border-2 border-primary" type="checkbox" value=""
+                                    id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Form Invoice
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm mt-4">Save</button>
                         </div>
                     </div>
                 </div>

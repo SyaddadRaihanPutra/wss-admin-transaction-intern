@@ -14,10 +14,10 @@ select.form-select{width:auto;display:inline-block}
 .ic-edit{color:#959595}
 .d-flex.text-nowrap.flex-column.align-items-start b,.d-flex.text-nowrap.flex-column.align-items-start p{margin:0;padding:0;line-height:1.2}
 .table{border:2px solid #e4e4e4}
-.table thead th{color:#534d59;padding:1rem 5px}
+.table thead th{color:#534d59;padding:1rem 15px}
 li.nav-item .nav-link{color:#717b8c}
 li.nav-item a.nav-link.active{color:#5a3ef1}
-.placeholder-container{width:150px;height:150px;border:2px dashed #ccc;border-radius:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#EDF2F6;position:relative;overflow:hidden;cursor:pointer}
+.placeholder-container{width:150px;height:150px;border:2px dashed #ccc;border-radius:15px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#edf2f6;position:relative;overflow:hidden;cursor:pointer}
 .placeholder-icon,.placeholder-text{text-align:center;z-index:1}
 #imagePreview{z-index:0}
 .placeholder-container:hover{cursor:pointer}
@@ -48,11 +48,17 @@ h3{color:#656565!important}
 .submenu{padding-left:2.5rem}
 .submenu .nav-link{padding-left:1.5rem}
 }
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-track{background:#f1f1f1}
-::-webkit-scrollbar-thumb{background:#4b7df3}
-::-webkit-scrollbar-thumb:hover{background:#6039c8}
-.table-responsive::-webkit-scrollbar{width:12px;height:12px}
-.table-responsive::-webkit-scrollbar-thumb{background-color:#6c757d;border-radius:10px;border:3px solid transparent;background-clip:content-box}
-.table-responsive::-webkit-scrollbar-track{background-color:#f8f9fa;border-radius:10px}
-.table-responsive{scrollbar-width:thin;scrollbar-color:#6c757d #f8f9fa}
+main{scrollbar-width:none}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:#888;border-radius:10px}
+::-webkit-scrollbar-track{background:0 0}
+::-webkit-scrollbar-button{display:none}
+.table-responsive{scrollbar-width:thin;}
+.text-success{color: #008847!important;}
+.btn-close {
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: #dc3545;
+    cursor: pointer;
+}

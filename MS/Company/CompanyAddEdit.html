@@ -33,7 +33,7 @@
         <nav class="navbar navbar-white">
             <div class="container-fluid">
                 <a href="/" class="navbar-brand fw-semibold">
-                    <img src="assets/img/wss-logo.png" width="60">
+                    <img src="../../assets/img/wss-logo.png" width="60">
                     WSS Admin Transaction
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -262,7 +262,7 @@
             </div>
         </div>
         <!-- Main Content -->
-        <main class="flex-fill p-3 mt-5 pt-4">
+        <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
             <h3 class="me-3 mt-2">Add/Edit Company</h3>
             <p class="fw-bold text-decoration-underline mt-3">Customer Profile</p>
             <form>
@@ -320,6 +320,10 @@
                                 <textarea class="form-control" id="alamat" rows="3"
                                     placeholder="Alamat......"></textarea>
                             </div>
+                            <div class="mb-3">
+                                <label for="KodePos" class="form-label fw-bold">Kode Pos</label>
+                                <input type="text" class="form-control" id="KodePos" placeholder="Kelurahan">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -374,7 +378,34 @@
         </main>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script>
+        document.getElementById('uploadContainer').addEventListener('click', function () {
+            document.getElementById('profileImage').click();
+        });
+
+        document.getElementById('profileImage').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imagePreview = document.getElementById('imagePreview');
+                    const iconContainer = document.getElementById('iconContainer');
+                    const placeholderText = document.getElementById('placeholderText');
+
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+
+                    // Hide the placeholder icon and text
+                    iconContainer.style.display = 'none';
+                    placeholderText.style.display = 'none';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
+
+    <script src="../../assets/js/script.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
         integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='

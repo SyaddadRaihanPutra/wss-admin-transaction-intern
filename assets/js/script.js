@@ -28,3 +28,37 @@ if (togglePasswordButton) {
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const newItemBtn = document.getElementById('new-item-btn');
+  const itemsContainer = document.getElementById('items-container');
+  const itemTemplate = document.querySelector('.item-template');
+
+  let itemCounter = 1;
+
+  newItemBtn.addEventListener('click', function() {
+      // Clone the template
+      const newItem = itemTemplate.cloneNode(true);
+
+      // Clear input fields in the cloned item
+      newItem.querySelectorAll('input').forEach(input => {
+          input.value = '';
+      });
+
+      // Set the new item number
+      itemCounter++;
+      newItem.querySelector('.item-number').textContent = itemCounter;
+
+      // Remove the 'item-template' class and make the new item visible
+      newItem.classList.remove('item-template');
+      newItem.classList.add('item');
+
+      // Append the new item to the container
+      itemsContainer.appendChild(newItem);
+  });
+});
+
+function removeItem(button) {
+  // Remove the item that contains the clicked button
+  button.closest('.item').remove();
+}

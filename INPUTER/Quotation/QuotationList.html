@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSS Admin Transaction</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
+        integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
+        crossorigin='anonymous' />
+    <link rel="stylesheet" href="../../assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Full-width Navbar -->
+    <nav class="navbar navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand fw-semibold">
+                <img src="../../assets/img/wss-logo.png" width="60">
+                WSS Admin Transaction
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+        <nav class="navbar navbar-white">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand fw-semibold">
+                    <img src="../../assets/img/wss-logo.png" width="60">
+                    WSS Admin Transaction
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </nav>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                        Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown mt-3">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-semibold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="d-flex flex-column flex-lg-row">
+        <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
+            style="min-height:100vh; width: 250px; overflow-y: auto;">
+            <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
+                <div class="search-box mb-3">
+                    <i class="ti ti-search"></i>
+                    <input type="text" id="search" class="form-control py-2" placeholder="Search...">
+                    <span class="badge bg-white"><i class="ti ti-command"></i>K</span>
+                </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-home fs-5"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-user-edit fs-5"></i>
+                        User Role Manage
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cs-active" aria-current="page">
+                        <i class="ti ti-arrows-right-left fs-5"></i>
+                        Quotation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-clipboard fs-5"></i>
+                            Purchase Order
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-receipt fs-5"></i>
+                        Invoice Penagihan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                        aria-expanded="false" aria-controls="masterSubmenu">
+                        <i class="ti ti-layout-grid fs-5"></i>
+                        Master
+                        <i class="ti ti-chevron-down ms-auto"></i>
+                    </a>
+                    <ul class="collapse list-unstyled submenu" id="masterSubmenu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Vendor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Bank Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Signature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>SeqNo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><span class="submenu-bullet"></span>Company</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav nav-pills flex-column mt-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-refresh fs-5"></i>
+                        Refresh
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-settings fs-5"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-current="page">
+                        <i class="ti ti-headphones fs-5"></i>
+                        Help Center
+                    </a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <hr>
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="35" height="35" class="rounded-3 me-2">
+                    <div>
+                        <span><small><strong>Faber Edinson</strong></small></span>
+                        <br>
+                        <span class="text-muted"><small>faber@email.com</small></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu text-small shadow">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger fw-semibold d-flex justify-content-between align-items-center"
+                            href="#">Sign out <i class="ti ti-logout"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
+            <div class="d-flex align-items-center">
+                <h3 class="me-3 mb-0">Quotation List</h3>
+                <button class="btn btn-primary rounded-3 fw-semibold">New Quotation</button>
+            </div>
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-md-3 col-lg-4 mb-4">
+                        <div class="form-floating">
+                            <select class="form-select w-100" id="floatingSelect1"
+                                aria-label="Floating label select example">
+                                <option selected>Customer Name</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="floatingSelect1">Customer</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-4 mb-4">
+                        <div class="form-floating">
+                            <select class="form-select w-100" id="floatingSelect2"
+                                aria-label="Floating label select example">
+                                <option selected>All</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="floatingSelect2">Status Approval</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table text-center text-nowrap table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;" class="text-center">Action</th>
+                            <th style="width: 100px;"></th>
+                            <th>No Quotation</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Approved Time</th>
+                            <th>Status Approval</th>
+                            <th class="text-center">Status Quotation</th>
+                            <th class="text-center">Keterangan Reject</th>
+                            <th>Created Date</th>
+                            <th>User Input</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button class="btn btn-primary">Submit</button></td>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>WSSQ0012</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$202.87</td>
+                            <td>-</td>
+                            <td>New</td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>New</option>
+                                    <option value="1">Cancel</option>
+                                    <option value="1">Approved</option>
+                                </select>
+                            </td>
+                            <td>-</td>
+                            <td>06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-primary">Submit</button></td>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>WSSQ0011</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$948.55</td>
+                            <td>-</td>
+                            <td>New</td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>New</option>
+                                    <option value="1">Cancel</option>
+                                    <option value="1">Approved</option>
+                                </select>
+                            </td>
+                            <td>-</td>
+                            <td>06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td><button class="btn btn-primary">Submit</button></td>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>WSSQ0010</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$406.27</td>
+                            <td>-</td>
+                            <td>New</td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>New</option>
+                                    <option value="1">Cancel</option>
+                                    <option value="1">Approved</option>
+                                </select>
+                            </td>
+                            <td>-</td>
+                            <td>06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0009</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$601.13</td>
+                            <td>05-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td><span class="text-danger fw-semibold">Cancel</span></td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0008</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$576.28</td>
+                            <td>05-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td><select class="form-select">
+                                    <option selected>Approved</option>
+                                    <option>New</option>
+                                    <option>Cancel</option>
+                                </select>
+                            </td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0007</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$782.01</td>
+                            <td>05-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td>
+                                <span class="text-success fw-semibold">Deal</span>
+                            </td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0006</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$630.44</td>
+                            <td>05-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td>
+                                <span class="text-success fw-semibold">Deal</span>
+                            </td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0005</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$106.58</td>
+                            <td>05-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td>
+                                <span class="text-success fw-semibold">Deal</span>
+                            </td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td class="text-center"><a href="#" class="text-decoration-none">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z"
+                                        stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#0058C6"
+                                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8 13H12" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8 17H16" stroke="#0058C6" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            </td>
+                            <td>WSSQ0004</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Name</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>$396.84</td>
+                            <td>04-08-2024 14:00</td>
+                            <td>Approved</td>
+                            <td>
+                                <span class="text-success fw-semibold">Deal</span>
+                            </td>
+                            <td>-</td>
+                            <td>04-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation example" class="mt-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <script src="../../assets/js/script.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
+        integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='
+        crossorigin='anonymous'></script>
+</body>
+
+</html>

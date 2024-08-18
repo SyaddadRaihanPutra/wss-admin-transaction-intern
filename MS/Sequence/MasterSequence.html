@@ -8,8 +8,8 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.css'
         integrity='sha512-VcyUgkobcyhqQl74HS1TcTMnLEfdfX6BbjhH8ZBjFU9YTwHwtoRtWSGzhpDVEJqtMlvLM2z3JIixUOu63PNCYQ=='
         crossorigin='anonymous' />
-    <link rel="stylesheet" href="./assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/vendors/tabler-icon/webfont/tabler-icons.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-light bg-white fixed-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand fw-semibold">
-                <img src="assets/img/wss-logo.png" width="60">
+                <img src="../../assets/img/wss-logo.png" width="60">
                 WSS Admin Transaction
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
@@ -33,7 +33,7 @@
         <nav class="navbar navbar-white">
             <div class="container-fluid">
                 <a href="/" class="navbar-brand fw-semibold">
-                    <img src="assets/img/wss-logo.png" width="60">
+                    <img src="../../assets/img/wss-logo.png" width="60">
                     WSS Admin Transaction
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -77,7 +77,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
                         aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
@@ -113,7 +113,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-settings fs-5"></i>
                         Settings
                     </a>
@@ -152,7 +152,7 @@
     <!-- Main Content Area -->
     <div class="d-flex flex-column flex-lg-row">
         <div class="d-none d-lg-flex flex-column flex-shrink-0 p-3 bg-white text-dark"
-            style="min-height:100vh;width: 250px; overflow-y: auto;">
+            style="min-height:100vh; width: 250px; overflow-y: auto;">
             <ul class="nav nav-pills flex-column mb-auto" style="margin-top: 70px;">
                 <div class="search-box mb-3">
                     <i class="ti ti-search"></i>
@@ -190,7 +190,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
+                    <a href="#" class="nav-link cs-active" data-bs-toggle="collapse" data-bs-target="#masterSubmenu"
                         aria-expanded="false" aria-controls="masterSubmenu">
                         <i class="ti ti-layout-grid fs-5"></i>
                         Master
@@ -226,7 +226,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link cs-active" aria-current="page">
+                    <a href="#" class="nav-link" aria-current="page">
                         <i class="ti ti-settings fs-5"></i>
                         Settings
                     </a>
@@ -263,142 +263,104 @@
         </div>
         <!-- Main Content -->
         <main class="flex-fill p-3 mt-5 pt-4 overflow-scroll">
-            <div class="card shadow-lg rounded-4">
-                <div class="card-body px-4">
-                    <!-- Navigation Tabs -->
-                    <ul class="nav nav-underline" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="account-tab" data-bs-toggle="tab" href="#account" role="tab"
-                                aria-controls="account" aria-selected="true">Account Setting</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="company-tab" data-bs-toggle="tab" href="#company" role="tab"
-                                aria-controls="company" aria-selected="false">Company</a>
-                        </li>
-                    </ul>
-
-                    <!-- Tab Content -->
-                    <div class="tab-content mt-2" id="myTabContent">
-                        <div class="tab-pane fade show active" id="account" role="tabpanel"
-                            aria-labelledby="account-tab">
-                            <div class="d-flex flex-column mt-4">
-                                <p class="text-muted">Your Profile Picture</p>
-                                <div class="placeholder-container" id="uploadContainer">
-                                    <div class="placeholder-icon" id="iconContainer">
-                                        <i class="ti ti-photo-plus"></i>
-                                    </div>
-                                    <p class="placeholder-text" id="placeholderText">Upload your <br> photo</p>
-                                    <!-- Preview Image -->
-                                    <img id="imagePreview" src="" alt="Profile Image Preview"
-                                        style="display:none; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 15px;">
-                                </div>
-                                <!-- Hidden File Input -->
-                                <input type="file" id="profileImage" accept="image/*" style="display:none;">
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Full name</label>
-                                        <input type="text" class="form-control" id="name"
-                                            placeholder="Please enter your full name" value="Faber Edinson">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Please enter your email" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="Username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="Username"
-                                            placeholder="Please enter your username" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Phone number</label>
-                                        <div class="input-group flex-nowrap">
-                                            <span class="input-group-text" id="addon-wrapping">+62</span>
-                                            <input type="number" class="form-control"
-                                                placeholder="Please enter your phone number" aria-label="telephone"
-                                                aria-describedby="addon-wrapping">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-save fw-semibold px-4 py-2">Save</button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="company-tab">
-                            <div class="row col-md-6 mt-4">
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Selected Company Now</label>
-                                        <input type="text" class="form-control" id="Company"
-                                            placeholder="PT Wiesesa Consulting Indonesia"
-                                            value="PT Wiesesa Consulting Indonesia" disabled />
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Change Company</label>
-                                        <select class="form-select w-100 d-block col-md-6"
-                                            aria-label="Default select example">
-                                            <option selected>PT Wiesesa Consulting Indonesia</option>
-                                            <option value="1">PT Wiesesa Consulting Indonesia</option>
-                                            <option value="2">PT Wiesesa Consulting Indonesia</option>
-                                            <option value="3">PT Wiesesa Consulting Indonesia</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-save fw-semibold px-4 py-2">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="d-flex align-items-center">
+                <h3 class="me-3 mb-0">Master Sequence No</h3>
+                <button class="btn btn-primary rounded-3 fw-semibold">Add Sequence</button>
             </div>
+            <div class="table-responsive mt-4">
+                <table class="table text-nowrap table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;"></th>
+                            <th>ID</th>
+                            <th>Form Name</th>
+                            <th>Level</th>
+                            <th>Format</th>
+                            <th>Status</th>
+                            <th class="text-center">Created Date</th>
+                            <th class="text-center">Last Edit</th>
+                            <th>User Input</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>001</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Quotation</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>5digit/0001/WCI-QTT/mm/yyyy</td>
+                            <td>Aktif</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>002</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>PO</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>2</td>
+                            <td>5digit/0001/WCI-PO/mm/yyyy</td>
+                            <td>Aktif</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><button class="btn"><i class="ti ti-pencil-minus ic-edit fs-3"></i>
+                            </td>
+                            <td>003</td>
+                            <td>
+                                <div class="d-flex text-nowrap flex-column align-items-start">
+                                    <b>Invoice</b>
+                                    <p class="text-muted">Description</p>
+                                </div>
+                            </td>
+                            <td>3</td>
+                            <td>5digit/0001/WCI-INV/mm/yyyy</td>
+                            <td>Aktif</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td class="text-center">06-08-2024</td>
+                            <td>Faber Edinson</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation example" class="mt-3">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </main>
-    </div>
+        </div>
 
-    <script>
-        document.getElementById('uploadContainer').addEventListener('click', function () {
-            document.getElementById('profileImage').click();
-        });
+        <script src="../../assets/js/script.js"></script>
 
-        document.getElementById('profileImage').addEventListener('change', function (event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imagePreview = document.getElementById('imagePreview');
-                    const iconContainer = document.getElementById('iconContainer');
-                    const placeholderText = document.getElementById('placeholderText');
-
-                    imagePreview.src = e.target.result;
-                    imagePreview.style.display = 'block';
-
-                    // Hide the placeholder icon and text
-                    iconContainer.style.display = 'none';
-                    placeholderText.style.display = 'none';
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-
-    </script>
-
-    <script src="./assets/js/script.js"></script>
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
-        integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='
-        crossorigin='anonymous'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'
+            integrity='sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=='
+            crossorigin='anonymous'></script>
 </body>
 
 </html>
