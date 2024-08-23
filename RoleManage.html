@@ -269,6 +269,49 @@
                     <option selected>Approval</option>
                     <option>Inputer</option>
                 </select>
+                <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#modalAddUser">Add
+                    User</button>
+
+                <!-- Modal -->
+                <div class="modal fade mt-5" id="modalAddUser" tabindex="-1" aria-labelledby="modalAddUser"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Add User</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullname" placeholder="Nelson">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">User Name</label>
+                                    <input type="email" class="form-control" id="username" placeholder="nelson">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="nelson@advantagescm.com">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="text" class="form-control" id="password" placeholder="******">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="password_confirm" class="form-label">Password Confirmation</label>
+                                            <input type="text" class="form-control" id="password_confirm" placeholder="******">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary px-3 fw-bold">Save Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="table-responsive mt-4">
                 <table class="table text-nowrap table-striped table-hover align-middle">
